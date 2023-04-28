@@ -1,17 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Local Radar</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="{% static 'wwapp/radar.css' %}" />
   </head>
   <body>
-    <h1>Local Radar</h1>
-    <h2>start date/time for rader here</h2>
+    {% include "wwapp/masterheader.html" %}
+    <h1>Local Radar (Precipitation)</h1>
+    <h2>start date/time for radar here</h2>
     <div>
-      <p>radar goes here</p>
+      <div id="map"></div>
     </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="{% static 'wwapp/radar.js' %}"></script>
   </body>
-  <footer><h1>nice footer here pls</h1></footer>
+  {% include "wwapp/masterfooter.html" %}
 </html>

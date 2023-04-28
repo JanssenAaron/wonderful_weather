@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,6 +8,7 @@
     <title>Document</title>
   </head>
   <body>
+    {% include "wwapp/masterheader.html" %}
     <h1>Cloud Formations</h1>
     <p>
       An important way to remain aware about the weather situation in which you
@@ -16,55 +18,72 @@
       safe even without official warning systems.
     </p>
     <h3>Contrails</h3>
+    <img src="{% static 'wwapp/contrails.jpg' %}" alt="Contrail Clouds" />
     <p>
       These clouds are often formed by aircraft, and in fair weather may be some
       of the only clouds in the sky.
     </p>
     <h3>Cirrus</h3>
+    <img src="{% static 'wwapp/cirrus.jpg' %}" alt="Cirrus Clouds" />
     <p>
       These clouds are very wispy and high in the atmosphere. May indicate a
       coming change of weather.
     </p>
     <h3>Altostratus</h3>
+    <img src="{% static 'wwapp/altostratus.jpg' %}" alt="Altostratus Cloud" />
     <p>
       Dark and "gloomy" clouds, indicative of precipitation, be it rain or snow.
     </p>
     <h3>Cumulonimbus</h3>
+    <img
+      src="{% static 'wwapp/cumulonimbus.jpg ' %}"
+      alt="Cumulonimbus Cloud"
+    />
     <p>
       Cumulonimbus clouds are indicators of a strong storm. Have a plan in place
       to take shelter if conditions should deteriorate.
     </p>
     <h3>Mammatus</h3>
+    <img src="{% static 'wwapp/mammatus.png' %}" alt="Mammatus Cloud" />
     <p>
       Looks like pouches within a cloud due to cold air sinking within the
       atomosphere. Another potential indicatio
     </p>
     <h3>Wall Cloud</h3>
+    <img
+      src="{% static 'wwapp/wall_cloud_crawford_co_091208.jpg' %}"
+      alt="A Wall Cloud"
+    />
     <p>
       Small downward offshoots of a larger base cloud. These are associated with
       strong rotation in a storm, and potentially indicative of a supercell
       thunderstorm.
     </p>
     <h3>Funnel Cloud</h3>
+    <img src="{% static 'wwapp/funnel_cloud.jpg' %}" alt="Funnel Cloud" />
     <p>
       Rapidly rotating offshoot. Typically cause for issuance of a tornado
       warning in the area in which it is spotted. Seek shelter if you see one.
     </p>
     <h3>Tornado</h3>
+    <img src="{% static 'wwapp/tornado.jpg' %}" alt="A Tornado" />
     <p>
       Although the larger variants are most well-known, any tornado of any size
       is potentially dangerous and shelter should be sought immediately if you
       see one.
     </p>
+    {% include "wwapp/masterfooter.html" %}
   </body>
+
   <footer>
     <p>
-      Cloud information taken from
+      Cloud information and photos obtained from
       <a href="https://scijinks.gov/clouds/">SciJinks.gov</a>
-      and
+      ,
       <a href="https://www.weather.gov/lmk/shelfcloudversusawallcloud"
         >Weather.gov</a
-      >
+      >, <a href="https://en.wikipedia.org/wiki/Funnel_cloud">Wikipedia</a> and
+      <a href="https://de.wikipedia.org/wiki/Tornado">Wikipedia</a>
     </p>
   </footer>
 </html>
