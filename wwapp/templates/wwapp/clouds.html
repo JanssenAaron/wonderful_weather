@@ -1,3 +1,4 @@
+{ % load static % }
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,37 +18,40 @@
       safe even without official warning systems.
     </p>
     <h3>Contrails</h3>
-    <img src="/wwapp/static/wwapp/contrails.jpg" alt="Contrail Clouds" />
+    <img src="{% static 'wwapp/contrails.jpg' %}" alt="Contrail Clouds" />
     <p>
       These clouds are often formed by aircraft, and in fair weather may be some
       of the only clouds in the sky.
     </p>
     <h3>Cirrus</h3>
-    <img src="/wwapp/static/wwapp/cirrus.jpg" alt="Cirrus Clouds" />
+    <img src="{% static 'wwapp/cirrus.jpg' %}" alt="Cirrus Clouds" />
     <p>
       These clouds are very wispy and high in the atmosphere. May indicate a
       coming change of weather.
     </p>
     <h3>Altostratus</h3>
-    <img src="/wwapp/static/wwapp/altostratus.jpg" alt="Altostratus Cloud" />
+    <img src="{% static 'wwapp/altostratus.jpg' %}" alt="Altostratus Cloud" />
     <p>
       Dark and "gloomy" clouds, indicative of precipitation, be it rain or snow.
     </p>
     <h3>Cumulonimbus</h3>
-    <img src="/wwapp/static/wwapp/cumulonimbus.jpg" alt="Cumulonimbus Cloud" />
+    <img
+      src="{% static 'wwapp/cumulonimbus.jpg ' %}"
+      alt="Cumulonimbus Cloud"
+    />
     <p>
       Cumulonimbus clouds are indicators of a strong storm. Have a plan in place
       to take shelter if conditions should deteriorate.
     </p>
     <h3>Mammatus</h3>
-    <img src="/wwapp/static/wwapp/mammatus.png" alt="Mammatus Cloud" />
+    <img src="{% static 'wwapp/mammatus.png' %}" alt="Mammatus Cloud" />
     <p>
       Looks like pouches within a cloud due to cold air sinking within the
       atomosphere. Another potential indicatio
     </p>
     <h3>Wall Cloud</h3>
     <img
-      src="/wwapp/static/wwapp/wall_cloud_crawford_co_091208.jpg"
+      src="{% static 'wwapp/wall_cloud_crawford_co_091208.jpg' %}"
       alt="A Wall Cloud"
     />
     <p>
