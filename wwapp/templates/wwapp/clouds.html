@@ -27,61 +27,123 @@
       encroaching storm. Being aware of the clouds around you allows you to stay
       safe even without official warning systems.
     </p>
-    <h3>Contrails</h3>
-    <img src="{% static 'wwapp/contrails.jpg' %}" alt="Contrail Clouds" />
-    <p>
-      These clouds are often formed by aircraft, and in fair weather may be some
-      of the only clouds in the sky.
-    </p>
-    <h3>Cirrus</h3>
-    <img src="{% static 'wwapp/cirrus.jpg' %}" alt="Cirrus Clouds" />
-    <p>
-      These clouds are very wispy and high in the atmosphere. May indicate a
-      coming change of weather.
-    </p>
-    <h3>Altostratus</h3>
-    <img src="{% static 'wwapp/altostratus.jpg' %}" alt="Altostratus Cloud" />
-    <p>
-      Dark and "gloomy" clouds, indicative of precipitation, be it rain or snow.
-    </p>
-    <h3>Cumulonimbus</h3>
-    <img
-      src="{% static 'wwapp/cumulonimbus.jpg ' %}"
-      alt="Cumulonimbus Cloud"
-    />
-    <p>
-      Cumulonimbus clouds are indicators of a strong storm. Have a plan in place
-      to take shelter if conditions should deteriorate.
-    </p>
-    <h3>Mammatus</h3>
-    <img src="{% static 'wwapp/mammatus.png' %}" alt="Mammatus Cloud" />
-    <p>
-      Looks like pouches within a cloud due to cold air sinking within the
-      atomosphere. Another potential indicatio
-    </p>
-    <h3>Wall Cloud</h3>
-    <img
-      src="{% static 'wwapp/wall_cloud_crawford_co_091208.jpg' %}"
-      alt="A Wall Cloud"
-    />
-    <p>
-      Small downward offshoots of a larger base cloud. These are associated with
-      strong rotation in a storm, and potentially indicative of a supercell
-      thunderstorm.
-    </p>
-    <h3>Funnel Cloud</h3>
-    <img src="{% static 'wwapp/funnel_cloud.jpg' %}" alt="Funnel Cloud" />
-    <p>
-      Rapidly rotating offshoot. Typically cause for issuance of a tornado
-      warning in the area in which it is spotted. Seek shelter if you see one.
-    </p>
-    <h3>Tornado</h3>
-    <img src="{% static 'wwapp/tornado.jpg' %}" alt="A Tornado" />
-    <p>
-      Although the larger variants are most well-known, any tornado of any size
-      is potentially dangerous and shelter should be sought immediately if you
-      see one.
-    </p>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/contrails.jpg' %}"
+        alt="Contrail Clouds"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Contrails</h5>
+        <p class="card-text">
+          These clouds are often formed by aircraft, and in fair weather may be
+          some of the only clouds in the sky.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/cirrus.jpg' %}"
+        alt="Cirrus Clouds"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Cirrus</h5>
+        <p class="card-text">
+          These clouds are very wispy and high in the atmosphere. May indicate a
+          coming change of weather.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/altostratus.jpg' %}"
+        alt="Altostratus Cloud"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Altostratus</h5>
+        <p class="card-text">
+          Dark and "gloomy" clouds, indicative of precipitation, be it rain or
+          snow.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/cumulonimbus.jpg' %}"
+        alt="Cumulonimbus Cloud"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Cumulonimbus</h5>
+        <p class="card-text">
+          Cumulonimbus clouds are indicators of a strong storm. Have a plan in
+          place to take shelter if conditions should deteriorate.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/mammatus.png' %}"
+        alt="Mammatus Cloud"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Mammatus</h5>
+        <p class="card-text">
+          Looks like pouches within a cloud due to cold air sinking within the
+          atomosphere. Another potential indication of incoming stormy weather.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/wall_cloud_crawford_co_091208.jpg' %}"
+        alt="A wall cloud attached to a larger storm system."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Wall Cloud</h5>
+        <p class="card-text">
+          Small downward offshoots of a larger base cloud. These are associated
+          with strong rotation in a storm, and potentially indicative of a
+          supercell thunderstorm.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/funnel_cloud.jpg' %}"
+        alt="A funnel cloud"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Funnel Cloud</h5>
+        <p class="card-text">
+          Rapidly rotating offshoot. Typically cause for issuance of a tornado
+          warning in the area in which it is spotted. Seek shelter if you see
+          one.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="width: 30rem">
+      <img
+        class="card-img-top"
+        src="{% static 'wwapp/tornado.jpg' %}"
+        alt="A tornado"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Tornado</h5>
+        <p class="card-text">
+          Although the larger variants are most well-known, any tornado of any
+          size is potentially dangerous and shelter should be sought immediately
+          if you see one.
+        </p>
+      </div>
+    </div>
     {% include "wwapp/masterfooter.html" %}
   </body>
 

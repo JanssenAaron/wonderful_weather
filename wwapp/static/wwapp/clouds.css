@@ -1,4 +1,6 @@
-img {
-  height: 250px;
-  border-radius: 8px;
+.card {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+  background-color: cornsilk;
 }
