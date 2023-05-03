@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Radar</title>
+    <title>NDSU Radar</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -25,7 +25,7 @@
   </head>
   <body>
     {% include "wwapp/masterheader.html" %}
-    <h1>Local Radar (Precipitation)</h1>
+    <h1>Local precipitation Radar</h1>
     <h2>start date/time for radar here</h2>
     <div>
       <div id="map"></div>
@@ -37,5 +37,6 @@
     ></script>
     <script src="{% static 'wwapp/radar.js' %}"></script>
   </body>
+  <div></div>
   {% include "wwapp/masterfooter.html" %}
 </html>
