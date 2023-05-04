@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,29 +13,93 @@
       href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{% static 'wwapp/weekend.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Weekend Forecast</title>
   </head>
-  <body>
+  <body class="bg-warning-subtle">
     {% include "wwapp/masterheader.html" %}
-    <h1>Weekend Forecast</h1>
-    <h2>Dates here</h2>
-    <div>
-      <div>
-        <h3>Friday</h3>
-        <h5>temp</h5>
-        <p>conditions</p>
+    <div class="container-fluid row">
+      <div class="col-4">
+        <div class="card border-success border-5 m-3">
+        <img src="{% static 'wwapp/cloudy_weather.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body bg-warning-subtle">
+          <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Friday</div>
+          <div class="row">
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.friday.tempnoon} </li>
+                <li class="list-group-item bg-success-subtle">Temperature High: { model.temphightoday} </li>
+                <li class="list-group-item bg-success-subtle">Temperature Low: { model.templowtoday}</li>
+              </ul>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Wind: { model.friday.windspeed }</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: { model.friday.precipitation }</li>
+                <li class="list-group-item bg-success-subtle">Humidity: { model.friday.humidity }</li>
+              </ul>
+            </div>
+        </div>
+
+        </div>
       </div>
-      <div>
-        <h3>Saturday</h3>
-        <h5>temp</h5>
-        <p>conditions</p>
-      </div>
-      <div>
-        <h3>Sunday</h3>
-        <h5>temp</h5>
-        <p>conditions</p>
-      </div>
+    </div>
+      <div class="col-4">
+        <div class="card border-success border-5 m-3">
+        <img src="{% static 'wwapp/sunny_weather.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body bg-warning-subtle">
+          <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Saturday</div>
+          <div class="row">
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.saturday.tempnoon} </li>
+                <li class="list-group-item bg-success-subtle">Temperature High: { model.saturday.temphightoday} </li>
+                <li class="list-group-item bg-success-subtle">Temperature Low: { model.saturday.templowtoday}</li>
+
+              </ul>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Wind: { model.saturday.windspeed }</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: { model.saturday.precipitation }</li>
+                <li class="list-group-item bg-success-subtle">Humidity: { model.saturday.humidity }</li>
+              </ul>
+            </div>
+        </div>
+
+        </div>
+      </div></div>
+      <div class="col-4">
+        <div class="card border-success border-5 m-3">
+        <img src="{% static 'wwapp/snowy_weather.jpg' %}" 
+        class="card-img-top" 
+        alt="...">
+        <div class="card-body bg-warning-subtle">
+          <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Sunday</div>
+          <div class="row">
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.sunday.tempnoon} </li>
+                <li class="list-group-item bg-success-subtle">Temperature High: { model.sunday.temphightoday} </li>
+                <li class="list-group-item bg-success-subtle">Temperature Low: { model.sunday.templowtoday}</li>
+
+              </ul>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-success-subtle">Wind: { model.sunday.windspeed }</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: { model.sunday.precipitation }</li>
+                <li class="list-group-item bg-success-subtle">Humidity: { model.sunday.humidity }</li>
+              </ul>
+            </div>
+        </div>
+
+        </div>
+      </div></div>
     </div>
   </body>
   {% include "wwapp/masterfooter.html" %}
