@@ -74,10 +74,6 @@ def radar(req):
 
     return render(req,'wwapp/radar.html')
 
-def monthly(req):
-    #API and weather code here
-
-    return render(req,'wwapp/monthly.html')
 
 def weekly(req):
     #API and weather code here
