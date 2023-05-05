@@ -1,6 +1,8 @@
-th {
-  color: green;
-}
-tr {
-  color: green;
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-color: green;
 }
