@@ -15,6 +15,8 @@ var radarWMS = L.tileLayer.wms(wmsUrl, {
   opacity: 0.8,
   attribution: "nowCOAST",
 });
+
+
 radarWMS.addTo(map);
 
 function goToMainCampus(){
