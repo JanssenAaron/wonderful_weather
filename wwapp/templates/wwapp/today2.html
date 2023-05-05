@@ -14,9 +14,9 @@
     {% include "wwapp/masterheader.html" %}
     <div id="main-content" class="container-sm border border-secondary-subtle border-2 rounded">
       {% if data.alerts %}
-      <h2 class="d-flex justify-content-center">Active Alerts</h2>
+      <h2 class="container d-flex justify-content-center">Active Alerts</h2>
       {% for element in data.alerts %}
-      <div class="d-flex justify-content-center">
+      <div class="container d-flex justify-content-center">
         <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#{{forloop.counter}}" aria-expanded="false" aria-controls="{{forloop.counter}}">
           {{element.0}}
         </button>
@@ -25,33 +25,87 @@
             {{element.1}}
           </div>
         </div>
-      </div><br>
+      </div>
       {% endfor %}
       <hr>
       {% endif %}
 
-      <div class="current-conditions">
-        <div class="d-flex justify-content-center">
-            <h1>{{data.shortF}}</h1>
-        </div>
-        <div class="d-flex justify-content-center">
-            <h1>{{data.currentTemp}}&deg;F</h1>
-        </div>
-        <div class="d-flex justify-content-center">
-            <h5>High:{{data.dailyHigh}}&deg;F Low:{{data.dailyLow}}&deg;F</h5>
+      <div class="container col-5">
+        <div class="container">
+          <div class="container d-flex justify-content-center">
+            <h6>Current Conditions</h6>
+          </div>
+          <div class="container d-flex justify-content-center">
+              <h1>{{data.shortF}}</h1>
+          </div>
+          <div class="container d-flex justify-content-center">
+              <h1>{{data.currentTemp}}&deg;F</h1>
+          </div>
+          <div class="container d-flex justify-content-center">
+              <h5>High:{{data.dailyHigh}}&deg;F Low:{{data.dailyLow}}&deg;F</h5>
+          </div>
         </div>
       </div>
 
+      <hr>
 
+      <div class="container">
+        <h3 class="container d-flex justify-content-center mb">
+          Today's Forecast
+        </h3>
+        <div class="container d-flex justify-content-center mb-4">
+          {{data.detailF}}
+        </div>
+        <div class="container d-flex justify-content-center">
+          <div id="leftBox" class="container col-6">
+            <div class="row justify-content-center mb-2">
+              Temperature right now: {{data.currentTemp}}&deg;F
+            </div>
+            <div class="row justify-content-center mb-2">
+              Feels Like: {{data.feelsLike}}&deg;F
+            </div>
+            <div class="row justify-content-center mb-2">
+              High for today: {{data.dailyHigh}}&deg;F
+            </div>
+            <div class="row justify-content-center mb-2">
+              Low for today: {{data.dailyLow}}&deg;F
+            </div>
+            <div class="row justify-content-center mb-2">
+              Relative Humidity: {{data.humidity}}&percnt;
+            </div>
+            <div class="row justify-content-center mb-2">
+              Dew Point: {{data.dewPoint}}&deg;F
+            </div>
+            <div class="row justify-content-center">
+              Sky Cover: {{data.skyCover}}&percnt;
+            </div>
+          </div>
 
-        
-      
-      
-        
-        
-        
-      
-      
+          <div id="rightBox" class="container col-6">
+            <div class="row justify-content-center mb-2">
+              Chance of Precipitation: {{data.chanceOfPrecip}}&percnt;
+            </div>
+            <div class="row justify-content-center mb-2">
+              Predicted Amount of Precipitation: {{data.amountOfPrecip}}"
+            </div>
+            <div class="row justify-content-center mb-2">
+              Predicted Snow Fall: {{data.snowFallAmmount}}"
+            </div>
+            <div class="row justify-content-center mb-2">
+              Wind Chill: {{data.windChill}}
+            </div>
+            <div class="row justify-content-center mb-2">
+              Wind Speed: {{data.windSpeed}} mph
+            </div>
+            <div class="row justify-content-center mb-2">
+              Wind Direction: {{data.windDirection}}&deg;
+            </div>
+            <div class="row justify-content-center mb-5">
+              Wind Gusts: {{data.windGusts}} mph
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     {% include "wwapp/masterfooter.html" %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
