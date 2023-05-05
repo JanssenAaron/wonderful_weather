@@ -65,7 +65,7 @@ def today(request):
         'alerts' : alerts,
     }
 
-    return render(request, 'wwapp/today.html', context={'data':data})
+    return render(request, 'wwapp/today2.html', context={'data':data})
 
 def clouds(req):
     #API and weather code here
