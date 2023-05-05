@@ -42,9 +42,6 @@ def today(request):
     for a in response3['features']:
         alerts.append((a['properties']['headline'],a['properties']['description']))
 
-    
-
-    
     data = {
         'dailyHigh':unitConv(response['properties']["maxTemperature"]['values'][0]['value']),
         'dailyLow':unitConv(response['properties']["minTemperature"]['values'][0]['value']),
@@ -65,7 +62,7 @@ def today(request):
         'alerts' : alerts,
     }
 
-    return render(request, 'wwapp/today.html', context={'data':data})
+    return render(request, 'wwapp/today2.html', context={'data':data})
 
 def clouds(req):
     #API and weather code here

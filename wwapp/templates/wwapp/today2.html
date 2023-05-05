@@ -10,7 +10,6 @@
     <title>Today's Weather</title>
   </head>
 
-
   <body>
     {% include "wwapp/masterheader.html" %}
     <div id="main-content" class="container-sm border border-secondary-subtle border-2 rounded">
@@ -31,11 +30,13 @@
       <hr>
       {% endif %}
       <div class="d-flex justify-content-center">
-        <h2>Conditions right Now</h2>
-        <div>
-          <br><h1>{{data.currentTemp}}&deg;F</h1>
-        </div>
-        
+        <h1>{{data.shortF}}</h1>
+      </div>
+      <div class="d-flex justify-content-center">
+        <h1>{{data.currentTemp}}&deg;F</h1>
+      </div>
+      <div class="d-flex justify-content-center">
+        <h5>High:{{data.dailyHigh}}&deg;F Low:{{data.dailyLow}}&deg;F</h5>
       </div>
 
         
