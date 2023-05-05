@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NDSU Radar</title>
-    <link rel="stylesheet" href="{% static 'wwapp/main.css' %}">
+    <link rel="stylesheet" href="{% static 'wwapp/main.css' %}" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -28,11 +28,22 @@
     {% include "wwapp/masterheader.html" %}
 
     <div class="container-fluid">
-      <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Local precipitation Radar <span>
-        <a class="btn btn-success" onclick="goToMainCampus()" href="#">Main Campus</a>
-        <a class="btn btn-success" onclick="goToBarryHall()" href="#">Barry Hall</a>
-        <a class="btn btn-success" onclick="goToRenaissanceHall()" href="#">Renaissance Hall</a>
-      </span></div>
+      <div
+        class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success"
+      >
+        Local Precipitation Radar
+        <span>
+          <a class="btn btn-success" onclick="goToMainCampus()" href="#"
+            >Main Campus</a
+          >
+          <a class="btn btn-success" onclick="goToBarryHall()" href="#"
+            >Barry Hall</a
+          >
+          <a class="btn btn-success" onclick="goToRenaissanceHall()" href="#"
+            >Renaissance Hall</a
+          >
+        </span>
+      </div>
       <div id="map" class="border border-5 border-success rounded-4"></div>
     </div>
     <script
