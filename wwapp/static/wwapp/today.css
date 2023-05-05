@@ -1,14 +1,15 @@
-body{
-  background-color:rgba(25,135,84,.25);
+body {
+  background-color: rgba(25, 135, 84, 0.25);
 }
 
-#main-content{
+#main-content {
   background-color: white;
 }
 
-.btn{
+.btn {
   padding: 10px;
 }
-
-
-
+#temp {
+  margin-left: auto;
+  margin-right: auto;
+}
