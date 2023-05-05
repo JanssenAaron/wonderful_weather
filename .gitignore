@@ -139,3 +139,5 @@ GitHub.sublime-settings
 .history
 __pycache__/__init__.cpython-311.pyc
 __pycache__/settings.cpython-311.pyc
+wonderful_weather/__pycache__/__init__.cpython-311.pyc
+wonderful_weather/__pycache__/settings.cpython-311.pyc
