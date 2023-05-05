@@ -65,13 +65,9 @@ def today(request):
     return render(request, 'wwapp/today2.html', context={'data':data})
 
 def clouds(req):
-    #API and weather code here
-
     return render(req,'wwapp/clouds.html')
 
 def radar(req):
-    #API and weather code here
-
     return render(req,'wwapp/radar.html')
 
 
@@ -81,6 +77,64 @@ def weekly(req):
     return render(req,'wwapp/weekly.html')
 
 def weekend(req):
-    #API and weather code here
+    response = getResponse(url1,header).json()
+    data = {}
+    days = response["properties"]["periods"]
 
-    return render(req,'wwapp/weekend.html')
+    friday = [ day for day in days if day["name"]=="Friday"]
+    if len(friday)==0:
+        friday = [ day for day in days if day["name"]=="Today"]
+    if len(friday)==0:
+        friday = [ day for day in days if day["name"]=="This Afternoon"]
+    if len(friday)==0:
+        friday = [ day for day in days if day["name"]=="Tonight"]
+    friday = friday[0]  
+
+    saturday = [ day for day in days if day["name"]=="Saturday"]
+    if len(saturday)==0:
+        saturday = [ day for day in days if day["name"]=="Today"]
+    if len(saturday)==0:
+        saturday = [ day for day in days if day["name"]=="This Afternoon"]
+    if len(saturday)==0:
+        saturday = [ day for day in days if day["name"]=="Tonight"]
+    saturday = saturday[0]
+    
+    sunday = [ day for day in days if day["name"]=="Sunday"]
+    if len(sunday)==0:
+        sunday = [ day for day in days if day["name"]=="Today"]
+    if len(sunday)==0:
+        sunday = [ day for day in days if day["name"]=="This Afternoon"]
+    if len(sunday)==0:
+        sunday = [ day for day in days if day["name"]=="Tonight"]
+    sunday = sunday[0]
+
+    data["friday"] = {
+        "temp":friday["temperature"],
+        "wind":friday["windSpeed"]+" "+friday["windDirection"],
+        "precipitation": friday["probabilityOfPrecipitation"]["value"] if friday["probabilityOfPrecipitation"]["value"]  else 0 ,
+        "humidity": friday["relativeHumidity"]["value"],
+        "icon": friday["icon"].split("?")[0]+ "?size=large",
+        "forecast":friday["detailedForecast"]
+    }
+    
+    data["saturday"] = {
+        "temp":saturday["temperature"],
+        "wind":saturday["windSpeed"]+" "+saturday["windDirection"],
+        "precipitation": saturday["probabilityOfPrecipitation"]["value"] if saturday["probabilityOfPrecipitation"]["value"]  else 0 ,
+        "humidity": saturday["relativeHumidity"]["value"],
+        "icon": saturday["icon"].split("?")[0]+ "?size=large",
+        "forecast":saturday["detailedForecast"]
+    }
+
+    data["sunday"] = {
+        "temp":sunday["temperature"],
+        "wind":sunday["windSpeed"]+" "+sunday["windDirection"],
+        "precipitation": sunday["probabilityOfPrecipitation"]["value"] if sunday["probabilityOfPrecipitation"]["value"]  else 0 ,
+        "humidity": sunday["relativeHumidity"]["value"],
+        "icon": sunday["icon"].split("?")[0]+ "?size=large",
+        "forecast":sunday["detailedForecast"]
+    }
+
+
+
+    return render(req,'wwapp/weekend.html', context={'data':data})

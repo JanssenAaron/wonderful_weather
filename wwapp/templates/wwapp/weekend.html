@@ -22,23 +22,23 @@
     <div class="container-fluid row">
       <div class="col-4">
         <div class="card border-success border-5 m-3">
-        <img src="{% static 'wwapp/cloudy_weather.jpg' %}" class="card-img-top" alt="...">
+        <img src="{{ data.friday.icon}}" class="card-img-top" alt="Icon For Fridays Weather">
         <div class="card-body bg-warning-subtle">
           <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Friday</div>
+          <div class="pb-2 mb-4 text-black border-bottom border-top border-success">{{data.friday.forecast}}</div>
           <div class="row">
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.friday.tempnoon} </li>
-                <li class="list-group-item bg-success-subtle">Temperature High: { model.temphightoday} </li>
-                <li class="list-group-item bg-success-subtle">Temperature Low: { model.templowtoday}</li>
+                <li class="list-group-item bg-success-subtle">Temperature: {{data.friday.temp}}&deg;F</li>
+                <li class="list-group-item bg-success-subtle">Humidity: {{data.friday.humidity}}%</li>
               </ul>
             </div>
             <div class="col-2"></div>
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Wind: { model.friday.windspeed }</li>
-                <li class="list-group-item bg-success-subtle">Precipitation: { model.friday.precipitation }</li>
-                <li class="list-group-item bg-success-subtle">Humidity: { model.friday.humidity }</li>
+                <li class="list-group-item bg-success-subtle">Wind: {{ data.friday.wind }}</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: {{ data.friday.precipitation}}%</li>
+
               </ul>
             </div>
         </div>
@@ -48,24 +48,24 @@
     </div>
       <div class="col-4">
         <div class="card border-success border-5 m-3">
-        <img src="{% static 'wwapp/sunny_weather.jpg' %}" class="card-img-top" alt="...">
+        <img src="{{ data.saturday.icon}}" class="card-img-top" alt="Icon For Saturdays Weather">
         <div class="card-body bg-warning-subtle">
           <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Saturday</div>
+          <div class="pb-2 mb-4 text-black border-bottom border-top border-success">{{data.saturday.forecast}}</div>
           <div class="row">
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.saturday.tempnoon} </li>
-                <li class="list-group-item bg-success-subtle">Temperature High: { model.saturday.temphightoday} </li>
-                <li class="list-group-item bg-success-subtle">Temperature Low: { model.saturday.templowtoday}</li>
+                <li class="list-group-item bg-success-subtle">Temperature: {{data.saturday.temp}}&deg;F</li>
+                <li class="list-group-item bg-success-subtle">Humidity: {{data.saturday.humidity}}%</li>
 
               </ul>
             </div>
             <div class="col-2"></div>
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Wind: { model.saturday.windspeed }</li>
-                <li class="list-group-item bg-success-subtle">Precipitation: { model.saturday.precipitation }</li>
-                <li class="list-group-item bg-success-subtle">Humidity: { model.saturday.humidity }</li>
+                <li class="list-group-item bg-success-subtle">Wind: {{data.saturday.wind}}</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: {{data.saturday.precipitation}}%</li>
+
               </ul>
             </div>
         </div>
@@ -74,26 +74,26 @@
       </div></div>
       <div class="col-4">
         <div class="card border-success border-5 m-3">
-        <img src="{% static 'wwapp/snowy_weather.jpg' %}" 
+        <img src="{{ data.sunday.icon}}" 
         class="card-img-top" 
-        alt="...">
+        alt="Icon For Sunday Weather">
         <div class="card-body bg-warning-subtle">
           <div class="h2 pb-2 mt-4 mb-4 text-success border-bottom border-top border-success">Sunday</div>
+          <div class="pb-2 mb-4 text-black border-bottom border-top border-success">{{data.sunday.forecast}}</div>
           <div class="row">
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Temperature Midday: { model.sunday.tempnoon} </li>
-                <li class="list-group-item bg-success-subtle">Temperature High: { model.sunday.temphightoday} </li>
-                <li class="list-group-item bg-success-subtle">Temperature Low: { model.sunday.templowtoday}</li>
+                <li class="list-group-item bg-success-subtle">Temperature: {{data.sunday.temp}}&deg;F</li>
+                <li class="list-group-item bg-success-subtle">Humidity: {{data.sunday.humidity}}%</li>
 
               </ul>
             </div>
             <div class="col-2"></div>
             <div class="col-5">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-success-subtle">Wind: { model.sunday.windspeed }</li>
-                <li class="list-group-item bg-success-subtle">Precipitation: { model.sunday.precipitation }</li>
-                <li class="list-group-item bg-success-subtle">Humidity: { model.sunday.humidity }</li>
+                <li class="list-group-item bg-success-subtle">Wind: {{data.sunday.wind}}</li>
+                <li class="list-group-item bg-success-subtle">Precipitation: {{data.sunday.precipitation}}%</li>
+                
               </ul>
             </div>
         </div>
