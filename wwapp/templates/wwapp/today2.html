@@ -29,15 +29,20 @@
       {% endfor %}
       <hr>
       {% endif %}
-      <div class="d-flex justify-content-center">
-        <h1>{{data.shortF}}</h1>
+
+      <div>
+        <div class="d-flex justify-content-center">
+            <h1>{{data.shortF}}</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h1>{{data.currentTemp}}&deg;F</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h5>High:{{data.dailyHigh}}&deg;F Low:{{data.dailyLow}}&deg;F</h5>
+        </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <h1>{{data.currentTemp}}&deg;F</h1>
-      </div>
-      <div class="d-flex justify-content-center">
-        <h5>High:{{data.dailyHigh}}&deg;F Low:{{data.dailyLow}}&deg;F</h5>
-      </div>
+
+      
 
         
       
