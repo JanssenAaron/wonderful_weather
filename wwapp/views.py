@@ -15,6 +15,10 @@ header = {
     'User-Agent':'weatherApp',
 }
 
+#Takes an input of speed in km/hr and returns the speed in mph ronded to the nearest mph.
+def speedConv(speedInKM):
+    return round(speedInKM*0.6213712)
+
 #Some of the values are metric. This takes a temp in metric as an input and returns
 #the temp in F rounded to the nearest degree
 def unitConv(tempInC):
@@ -51,8 +55,8 @@ def today(request):
         'windChill': response['properties']["windChill"]['values'][0]['value'],
         'skyCover':response['properties']["skyCover"]['values'][0]['value'], #percent,
         'windDirection':response['properties']["windDirection"]['values'][0]['value'], #angle in degrees,
-        'windSpeed':response['properties']["windSpeed"]['values'][0]['value'], #km/hr
-        'windGusts':response['properties']["windGust"]['values'][0]['value'],
+        'windSpeed':speedConv(response['properties']["windSpeed"]['values'][0]['value']), #km/hr
+        'windGusts':speedConv(response['properties']["windGust"]['values'][0]['value']),
         'chanceOfPrecip':response['properties']["probabilityOfPrecipitation"]['values'][0]['value'], #percent
         'amountOfPrecip':response['properties']["quantitativePrecipitation"]['values'][0]['value'],
         'snowFallAmmount':response['properties']["snowfallAmount"]['values'][0]['value'],
