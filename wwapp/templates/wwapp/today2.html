@@ -12,11 +12,9 @@
 
   <body>
     {% include "wwapp/masterheader.html" %}
-    <div id="main-content" class="container-sm border border-secondary-subtle border-2 rounded">
-      {% if data.alerts %}
-      <h2 class="container d-flex justify-content-center">Active Alerts</h2>
+    <div class="container-sm border border-secondary-subtle border-2 rounded text-bg-info" style="background-image: url({{data.icon}}); background-size: cover; background-position: center;">
       {% for element in data.alerts %}
-      <div class="container d-flex justify-content-center">
+      <div class="container d-flex justify-content-center m-2">
         <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#{{forloop.counter}}" aria-expanded="false" aria-controls="{{forloop.counter}}">
           {{element.0}}
         </button>
@@ -26,15 +24,12 @@
           </div>
         </div>
       </div>
+      {% empty %}
       {% endfor %}
       <hr>
-      {% endif %}
 
       <div class="container">
         <div class="container">
-          <div class="container d-flex justify-content-center">
-            <h6>Current Conditions</h6>
-          </div>
           <div class="container d-flex justify-content-center">
               <h1>{{data.shortF}}</h1>
           </div>
@@ -62,6 +57,9 @@
               Temperature right now: {{data.currentTemp}}&deg;F
             </div>
             <div class="row justify-content-center mb-2">
+              Adjusted for Wind Chill: {{data.windChill}}&deg;F
+            </div>
+            <div class="row justify-content-center mb-2">
               Feels Like: {{data.feelsLike}}&deg;F
             </div>
             <div class="row justify-content-center mb-2">
@@ -76,12 +74,12 @@
             <div class="row justify-content-center mb-2">
               Dew Point: {{data.dewPoint}}&deg;F
             </div>
-            <div class="row justify-content-center">
-              Sky Cover: {{data.skyCover}}&percnt;
-            </div>
           </div>
 
           <div id="rightBox" class="container col-6">
+            <div class="row justify-content-center">
+              Sky Cover: {{data.skyCover}}&percnt;
+            </div>
             <div class="row justify-content-center mb-2">
               Chance of Precipitation: {{data.chanceOfPrecip}}&percnt;
             </div>
@@ -90,9 +88,6 @@
             </div>
             <div class="row justify-content-center mb-2">
               Predicted Snow Fall: {{data.snowFallAmmount}}"
-            </div>
-            <div class="row justify-content-center mb-2">
-              Wind Chill: {{data.windChill}}
             </div>
             <div class="row justify-content-center mb-2">
               Wind Speed: {{data.windSpeed}} mph
