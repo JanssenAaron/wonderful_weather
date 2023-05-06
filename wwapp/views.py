@@ -55,7 +55,7 @@ def today(request):
         'windChill': response['properties']["windChill"]['values'][0]['value'],
         'skyCover':response['properties']["skyCover"]['values'][0]['value'], #percent,
         'windDirection':response['properties']["windDirection"]['values'][0]['value'], #angle in degrees,
-        'windSpeed':speedConv(response['properties']["windSpeed"]['values'][0]['value']), #km/hr
+        'windSpeed':speedConv(response['properties']["windSpeed"]['values'][0]['value']), 
         'windGusts':speedConv(response['properties']["windGust"]['values'][0]['value']),
         'chanceOfPrecip':response['properties']["probabilityOfPrecipitation"]['values'][0]['value'], #percent
         'amountOfPrecip':response['properties']["quantitativePrecipitation"]['values'][0]['value'],
